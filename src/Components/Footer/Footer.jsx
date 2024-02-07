@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.scss";
 import pdf from "./Javier-AzagraCV.pdf";
+import { useTranslation } from "react-i18next";
 
 const SocialIcon = ({ platform, link, icon, viewBox }) => (
   <a href={link} rel="noreferrer" target="_blank" aria-label="social">
@@ -16,6 +17,7 @@ const SocialIcon = ({ platform, link, icon, viewBox }) => (
 );
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <div className="footer">
       <div className="footer--top">
@@ -39,11 +41,7 @@ const Footer = () => {
               </svg>
             </a>
           </h1>
-          <p>
-            A Frontend focused Web Developer building the Frontend of Websites
-            and Web Applications that leads to the success of the overall
-            product
-          </p>
+          <p>{t("AboutInfo")}</p>
         </div>
         <div className="footer--top__social">
           <h1>SOCIAL</h1>

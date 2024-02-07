@@ -17,8 +17,8 @@ i18n.use(initReactI18next).init({
       translation: de,
     },
   },
-  lng: "es" /* window.location.pathname.substring(1, 2) === 'es' ? 'es': 'en', */, // Idioma predeterminado
-  fallbackLng: "en", // Idioma de respaldo
+  lng: "en" /* window.location.pathname.substring(1, 2) === 'es' ? 'es': 'en', */, // Idioma predeterminado
+  fallbackLng: "es", // Idioma de respaldo
   interpolation: {
     escapeValue: false,
   },

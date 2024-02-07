@@ -1,26 +1,55 @@
 import React from "react";
 import "./Experience.scss";
+import { useTranslation } from "react-i18next";
 
-const Experience = ({ experience }) => {
+const Experience = () => {
+  const { t } = useTranslation();
   return (
     <div className="experience" id="experience">
       <div className="experience--title"></div>
+
       <div className="experience__cards">
-        {experience.map((exp, index) => (
-          <div className="experience__cards--card">
-            <div className="experience__cards--card__left">
-              <p>{exp.year}</p>
-              <p>{exp.year2}</p>
-            </div>
-            <div className="experience__cards--card__right">
-              <h1>{exp.name}</h1>
-              <a href={exp.url} target="_blank">
-                {exp.url2}
-              </a>
-              <p>{exp.description}</p>
-            </div>
+        <div className="experience__cards--card">
+          <div className="experience__cards--card__left">
+            <p>2023</p>
+            <p>Present</p>
           </div>
-        ))}
+          <div className="experience__cards--card__right">
+            <h1>Full Stack Developer</h1>
+            <a href="https://javierazagra.com" target="_blank">
+              javierazagra.com
+            </a>
+            <p>{t("Experience1")}</p>
+          </div>
+        </div>
+
+        <div className="experience__cards--card">
+          <div className="experience__cards--card__left">
+            <p>May</p>
+            <p>June 2023</p>
+          </div>
+          <div className="experience__cards--card__right">
+            <h1>Full Stack Developer</h1>
+            <a href="https://www.primaverasound.com/es/" target="_blank">
+              primaverasound.com
+            </a>
+            <p>{t("Experience2")}</p>
+          </div>
+        </div>
+
+        <div className="experience__cards--card">
+          <div className="experience__cards--card__left">
+            <p>April</p>
+            <p>June 2021</p>
+          </div>
+          <div className="experience__cards--card__right">
+            <h1>Full Stack Developer</h1>
+            <a href="https://www.alten.es/" target="_blank">
+              alten.es
+            </a>
+            <p>{t("Experience3")}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

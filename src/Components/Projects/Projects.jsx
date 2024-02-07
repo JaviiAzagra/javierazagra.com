@@ -32,10 +32,7 @@ const Projects = ({ darkMode }) => {
               <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
             </svg>
           </a>
-          <p>
-            ⌨️ Tk Keyboards is dedicated to creating high-quality mechanical
-            keyboards and custom kits.
-          </p>
+          <p>{t("Description1")}</p>
         </div>
 
         <div className="projects--cards__card">
@@ -66,10 +63,7 @@ const Projects = ({ darkMode }) => {
               <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
             </svg>
           </a>
-          <p>
-            🏥 Medical clinic project created with React for the final project
-            of the Full Stack Developer bootcamp.
-          </p>
+          <p>{t("Description2")}</p>
         </div>
 
         <div className="projects--cards__card">
@@ -96,7 +90,7 @@ const Projects = ({ darkMode }) => {
               <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
             </svg>
           </a>
-          <p>🏪 A sneaker and clothing store created with Angular.</p>
+          <p>{t("Description3")}</p>
         </div>
 
         <div className="projects--cards__card">
@@ -123,9 +117,7 @@ const Projects = ({ darkMode }) => {
               <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
             </svg>
           </a>
-          <p>
-            Program the entire frontend of the page. Includes several languages.
-          </p>
+          <p>{t("Description4")}</p>
         </div>
         <div className="projects--cards__card">
           <div className="projects--cards__card--img">
@@ -151,10 +143,7 @@ const Projects = ({ darkMode }) => {
               <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
             </svg>
           </a>
-          <p>
-            🚗 Luxury car rental website built with Angular and functionality
-            allowing users to delete, create, and edit vehicles.
-          </p>
+          <p>{t("Description5")}</p>
         </div>
         <div className="projects--cards__card">
           <div className="projects--cards__card--img">
@@ -180,9 +169,7 @@ const Projects = ({ darkMode }) => {
               <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
             </svg>
           </a>
-          <p>
-            🤖 A discord bot with roles, music, tickets and admins commands.
-          </p>
+          <p>{t("Description6")}</p>
         </div>
       </div>
     </div>
