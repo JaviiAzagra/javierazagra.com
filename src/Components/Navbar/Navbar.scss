@@ -259,8 +259,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 40px; /* Anchura reducida */
-  height: 20px; /* Altura reducida */
+  width: 43px; /* Anchura reducida */
+  height: 22px; /* Altura reducida */
 }
 
 .switch input {
@@ -276,19 +276,20 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #eff0f3;
+  border: 1px solid #b3b3b3;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-radius: 10px; /* Bordes redondeados */
+  border-radius: 15px; /* Bordes redondeados */
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 16px; /* Altura del indicador reducida */
-  width: 16px; /* Anchura del indicador reducida */
+  height: 18px; /* Altura del indicador reducida */
+  width: 18px; /* Anchura del indicador reducida */
   left: 2px; /* Posición ajustada */
-  bottom: 2px; /* Posición ajustada */
+  bottom: 1px; /* Posición ajustada */
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -296,11 +297,11 @@
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #272a30;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #272a30;
 }
 
 input:checked + .slider:before {
@@ -313,31 +314,17 @@ input:checked + .slider:before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  fill: #ffffff; /* Color de los iconos */
+  stroke: black;
+  left: 4px;
 }
 
-/* Estilos específicos para el icono del sol */
-.slider svg.sun {
-  left: 1px; /* Ajuste la posición del icono del sol */
-  width: 14px;
-  height: 14px;
+/* Ajustar posición del ícono según estado del switch */
+input:checked + .slider svg:nth-child(1) {
+  left: 25px;
 }
 
-/* Estilos específicos para el icono de la luna */
-.slider svg.moon {
-  right: 10px; /* Ajuste la posición del icono de la luna */
-  width: 14px;
-  height: 14px;
-}
-
-/* Estilos cuando el switch está en modo oscuro */
-.dark-mode .slider svg.sun {
-  display: none; /* Ocultar el icono del sol en modo oscuro */
-}
-
-/* Estilos cuando el switch está en modo claro */
-.dark-mode .slider svg.moon {
-  display: none; /* Ocultar el icono de la luna en modo claro */
+input:not(:checked) + .slider svg:nth-child(2) {
+  right: 12px;
 }
 
 @media screen and (max-width: 750px) {

@@ -21,7 +21,7 @@ function App() {
       <Analytics />
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <About />
-      <Projects projects={CV.projects} />
+      <Projects darkMode={darkMode} />
       <Experience experience={CV.experience} />
       <Contact />
       <Footer />
