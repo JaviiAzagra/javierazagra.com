@@ -12,8 +12,14 @@
     gap: 20px;
     max-width: 1500px;
 
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
     &__card {
       width: 340px;
+      height: 170px;
       display: flex;
       flex-direction: column;
       justify-content: start;
@@ -39,17 +45,16 @@
         align-items: center;
         gap: 8px;
       }
-      a:hover {
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
-      }
-
       p {
         color: #777777;
         font-size: 15px;
         font-weight: 400;
         line-height: 20px;
       }
+    }
+
+    &__card:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
   }
 }

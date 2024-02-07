@@ -29,7 +29,7 @@ const Experience = () => {
             <p>June 2023</p>
           </div>
           <div className="experience__cards--card__right">
-            <h1>Full Stack Developer</h1>
+            <h1>IT Technician</h1>
             <a href="https://www.primaverasound.com/es/" target="_blank">
               primaverasound.com
             </a>
@@ -43,7 +43,7 @@ const Experience = () => {
             <p>June 2021</p>
           </div>
           <div className="experience__cards--card__right">
-            <h1>Full Stack Developer</h1>
+            <h1>IT Technician</h1>
             <a href="https://www.alten.es/" target="_blank">
               alten.es
             </a>
