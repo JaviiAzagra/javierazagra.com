@@ -7,6 +7,7 @@ import CV from "./CV/CV";
 import Experience from "./Components/Experience/Experience";
 import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
+      <Analytics />
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <About />
       <Projects projects={CV.projects} />
