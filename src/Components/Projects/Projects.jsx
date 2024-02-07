@@ -1,7 +1,10 @@
 import React from "react";
 import "./Projects.scss";
+import { useTranslation } from "react-i18next";
 
 const Projects = ({ projects }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="projects" id="projects">
       <div className="projects--cards">

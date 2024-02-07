@@ -58,10 +58,10 @@ export const CV = {
       year: "2023",
       year2: "Present",
       where: "Freelance",
-      url: "https://www.mestrecabreta.com",
-      url2: "mestrecabreta.com",
+      url: "https://www.javierazagra.com",
+      url2: "javierazagra.com",
       description:
-        "Program the entire frontend of the Mestre Cabreta page. Created with react. Includes several languages ​​and fully responsive.",
+        "As a freelance full stack developer, I have expertise in both front-end and back-end development, enabling me to deliver comprehensive web solutions. From designing user interfaces to optimizing server performance, I provide customized, high-quality solutions that drive business success.",
       tools: [
         {
           tool1: "JavaScript",
@@ -80,7 +80,7 @@ export const CV = {
       url: "https://www.primaverasound.com/es/",
       url2: "primaverasound.com",
       description:
-        "Resolution of problems for clients and for the company itself.",
+        "I worked on troubleshooting computer problems and configuring both printers and computers. Additionally, I was involved in organizing printers and their network configurations.",
       tools: [
         {
           tool1: "Excel",
@@ -99,7 +99,7 @@ export const CV = {
       url: "https://www.alten.es/",
       url2: "alten.es",
       description:
-        "Resolution of problems for clients and for the company itself.",
+        "My job involved resolving software-related computer issues for both our company and the clients we served. I also had proficiency in Microsoft Office.",
       tools: [
         {
           tool1: "Excel",
@@ -132,7 +132,8 @@ export const CV = {
   projects: [
     {
       name: "TK Keyboards",
-      description: "⌨️ A page to buy keyboards",
+      description:
+        "⌨️ Tk Keyboards is dedicated to creating high-quality mechanical keyboards and custom kits.",
       url: "https://tk-keyboards.vercel.app/",
       github: "https://github.com/JaviiAzagra/Tk-Keyboards",
       languages: "JavaScript",
@@ -141,7 +142,8 @@ export const CV = {
     },
     {
       name: "Medical Clinic",
-      description: "🏥 Page of a medical clinic with login",
+      description:
+        "🏥 Medical clinic project created with React for the final project of the Full Stack Developer bootcamp.",
       url: "https://front-proyectofinal.vercel.app/",
       github: "https://github.com/JaviiAzagra/front-proyectofinal",
       languages: "JavaScript",
@@ -169,7 +171,8 @@ export const CV = {
     },
     {
       name: "Luxury Cars",
-      description: "🚗 A luxury cars rental page created with Angular.",
+      description:
+        "🚗 Luxury car rental website built with Angular and functionality allowing users to delete, create, and edit vehicles.",
       url: "https://luxury-cars-two.vercel.app/",
       github: "https://github.com/JaviiAzagra/Luxury-Cars-Angular-Project",
       languages: "JavaScript",

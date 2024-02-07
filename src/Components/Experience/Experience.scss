@@ -12,12 +12,12 @@
     &--card {
       display: flex;
       justify-content: start;
-      gap: 20px;
       padding: 20px;
       width: 530px;
       border-radius: 12px;
 
       &__left {
+        width: 120px;
         display: flex;
         gap: 10px;
         text-transform: uppercase;
@@ -31,6 +31,7 @@
       }
 
       &__right {
+        width: 410px;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -70,11 +71,13 @@
 @media (max-width: 605px) {
   .experience__cards--card {
     width: 400px;
+    gap: 20px;
   }
 }
 
 @media (max-width: 500px) {
   .experience__cards--card {
     width: 300px;
+    gap: 20px;
   }
 }

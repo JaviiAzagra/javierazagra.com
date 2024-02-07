@@ -14,9 +14,9 @@
 
     &__card {
       width: 340px;
-      height: 140px;
       display: flex;
       flex-direction: column;
+      justify-content: start;
       gap: 15px;
       padding: 20px;
       border-radius: 12px;
