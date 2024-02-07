@@ -20,7 +20,12 @@ body {
   color: #fff;
 
   .navbar {
+    background-color: transparent;
+  }
+
+  .navbar.colorChange {
     background-color: #1b1b1f;
+    border-bottom: 1px solid #eff0f3;
   }
 
   a,

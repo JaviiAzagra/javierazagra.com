@@ -82,6 +82,7 @@
     img {
       width: 300px;
       border-radius: 50%;
+      box-shadow: -20px -20px 150px 0 #396b7b, 20px 40px 150px 0 #c2bab0;
     }
   }
 }
@@ -154,5 +155,18 @@
         padding: 20px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    gap: 20px;
+  }
+
+  .about--left {
+    gap: 10px;
+  }
+  .about--right img {
+    width: 250px;
   }
 }

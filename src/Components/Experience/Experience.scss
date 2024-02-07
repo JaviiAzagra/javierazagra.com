@@ -79,5 +79,9 @@
   .experience__cards--card {
     width: 300px;
     gap: 20px;
+
+    &__right {
+      width: 250px;
+    }
   }
 }
