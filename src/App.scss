@@ -56,6 +56,10 @@ body {
     background-color: #202127;
   }
 
+  .projects--cards__card:hover {
+    box-shadow: 0 0 10px rgba(119, 119, 119, 0.3);
+  }
+
   .experience__cards--card:hover {
     background-color: #202127;
   }
