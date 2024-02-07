@@ -1,0 +1,357 @@
+.menu {
+  display: none;
+}
+
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  position: fixed;
+  background-color: #fff;
+
+  nav {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    height: 61px;
+  }
+
+  &--logo {
+    margin-top: 2px;
+    img {
+      width: 30px;
+    }
+  }
+
+  &--links {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+
+    &__link {
+      height: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-right: solid 1px #cccccc;
+      padding-right: 20px;
+    }
+
+    &__lng {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3px;
+      cursor: pointer;
+    }
+
+    &__theme {
+      height: auto;
+      border-left: solid 1px #cccccc;
+      padding-left: 20px;
+    }
+
+    &__social {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-left: solid 1px #cccccc;
+      padding-left: 20px;
+      height: 20px;
+
+      a {
+        display: flex;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #2196f3;
+      }
+    }
+
+    a {
+      display: flex;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #2196f3;
+    }
+  }
+}
+
+.dropbtn {
+  background-color: transparent;
+  padding: 4px 6px 5px 10px;
+  font-size: 16px;
+  border: none;
+}
+
+/* Estilo para el contenedor del dropdown */
+.dropdown {
+  position: relative;
+}
+/* Estilo para el contenido del dropdown (las opciones) */
+.dropdown-content {
+  padding: 10px 8px;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+  z-index: 100;
+  right: -25px;
+  top: 52px;
+  border-radius: 8px;
+}
+
+/* Estilo para cada opción del dropdown */
+.dropdown-content a {
+  padding: 6px 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 5px;
+  margin-top: 5px;
+
+  img {
+    width: 20px;
+  }
+}
+
+/* Cambiar el color del enlace cuando se pasa el ratón por encima */
+.dropdown-content a:hover {
+  color: #2196f3;
+  text-decoration: none;
+  background-color: #e9e8e8;
+  border-radius: 8px;
+}
+
+/* Mostrar el contenido del dropdown cuando se pasa el ratón por encima del botón */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.mobilemenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--content {
+    width: 100%;
+    height: 100%;
+    top: 82px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &__links {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      &--link {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        a {
+          text-decoration: none;
+          padding-bottom: 14px;
+          border-bottom: 1px solid #cccccc;
+          font-size: 15px;
+        }
+        a:hover {
+          text-decoration: underline;
+          color: #2196f3;
+        }
+      }
+
+      &--lng {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 14px;
+
+        a {
+          color: #5e5e5e;
+          font-size: 13px;
+          display: flex;
+          gap: 5px;
+        }
+
+        &__svg {
+          display: flex;
+          gap: 10px;
+
+          p {
+            font-weight: 500;
+          }
+        }
+      }
+
+      &--appearance {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f6f6f7;
+        padding: 10px;
+        border-radius: 12px;
+        font-size: 12px;
+
+        p {
+          color: #777777;
+        }
+      }
+
+      &--social {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: black;
+    }
+
+    button:hover {
+      background: none;
+    }
+  }
+}
+
+.close-buttonmobile {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Anchura reducida */
+  height: 20px; /* Altura reducida */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Altura del indicador reducida */
+  width: 16px; /* Anchura del indicador reducida */
+  left: 2px; /* Posición ajustada */
+  bottom: 2px; /* Posición ajustada */
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%; /* Indicador redondeado */
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px); /* Desplazamiento reducido */
+  -ms-transform: translateX(20px); /* Desplazamiento reducido */
+  transform: translateX(20px); /* Desplazamiento reducido */
+}
+
+.slider svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #ffffff; /* Color de los iconos */
+}
+
+/* Estilos específicos para el icono del sol */
+.slider svg.sun {
+  left: 1px; /* Ajuste la posición del icono del sol */
+  width: 14px;
+  height: 14px;
+}
+
+/* Estilos específicos para el icono de la luna */
+.slider svg.moon {
+  right: 10px; /* Ajuste la posición del icono de la luna */
+  width: 14px;
+  height: 14px;
+}
+
+/* Estilos cuando el switch está en modo oscuro */
+.dark-mode .slider svg.sun {
+  display: none; /* Ocultar el icono del sol en modo oscuro */
+}
+
+/* Estilos cuando el switch está en modo claro */
+.dark-mode .slider svg.moon {
+  display: none; /* Ocultar el icono de la luna en modo claro */
+}
+
+@media screen and (max-width: 750px) {
+  .menu {
+    display: block;
+  }
+
+  nav {
+    height: 62px;
+  }
+
+  .navbar nav {
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar--links {
+    display: none;
+  }
+}
