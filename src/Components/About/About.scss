@@ -158,6 +158,12 @@
   }
 }
 
+@media screen and (max-width: 750px) {
+  .about {
+    padding-top: 50px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .about {
     gap: 20px;

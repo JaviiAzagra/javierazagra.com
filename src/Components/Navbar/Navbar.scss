@@ -345,7 +345,7 @@ input:checked + .slider:before {
   top: 50%;
   transform: translateY(-50%);
   stroke: black;
-  left: 4px;
+  left: 3px;
 }
 
 /* Ajustar posición del ícono según estado del switch */
@@ -360,6 +360,10 @@ input:not(:checked) + .slider svg:nth-child(2) {
 @media screen and (max-width: 750px) {
   .menu {
     display: block;
+  }
+
+  .navbar {
+    position: relative;
   }
 
   nav {

@@ -15,7 +15,9 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
   };
 
   const changeNavbarColor = () => {
-    setColorChange(window.scrollY >= 80);
+    if (window.innerWidth >= 750) {
+      setColorChange(window.scrollY >= 4);
+    }
   };
 
   useEffect(() => {
