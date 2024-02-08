@@ -61,6 +61,7 @@ const About = () => {
                 </div>
               </div>
             )}
+            <a href="mailto:javiazagra12@gmail.com">{t("ContactMe")}</a>
           </div>
         </div>
         <div className="about--right">
