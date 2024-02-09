@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.scss";
 import Navbar from "./Components/Navbar/Navbar";
 import About from "./Components/About/About";
@@ -10,10 +10,32 @@ import Contact from "./Components/Contact/Contact";
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const storedDarkMode = localStorage.getItem("darkMode");
+  const [darkMode, setDarkMode] = useState(
+    storedDarkMode ? JSON.parse(storedDarkMode) : null
+  );
+
+  useEffect(() => {
+    if (darkMode === null) {
+      const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+      setDarkMode(prefersDarkMode.matches);
+
+      const handleChange = (event) => {
+        setDarkMode(event.matches);
+      };
+
+      prefersDarkMode.addEventListener("change", handleChange);
+
+      return () => {
+        prefersDarkMode.removeEventListener("change", handleChange);
+      };
+    }
+  }, [darkMode]);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    localStorage.setItem("darkMode", JSON.stringify(newDarkMode));
   };
 
   return (

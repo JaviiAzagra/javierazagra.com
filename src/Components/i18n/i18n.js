@@ -4,24 +4,32 @@ import { initReactI18next } from "react-i18next";
 import en from "./en.json";
 import es from "./es.json";
 import de from "./de.json";
+import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 
-i18n.use(initReactI18next).init({
-  resources: {
-    en: {
-      translation: en,
+i18n
+  .use(initReactI18next)
+  .use(I18nextBrowserLanguageDetector)
+  .init({
+    resources: {
+      en: {
+        translation: en,
+      },
+      es: {
+        translation: es,
+      },
+      de: {
+        translation: de,
+      },
     },
-    es: {
-      translation: es,
+    fallbackLng: "en",
+    debug: true,
+    interpolation: {
+      escapeValue: false,
     },
-    de: {
-      translation: de,
+    detection: {
+      order: ["localStorage", "navigator"],
+      caches: ["localStorage"],
     },
-  },
-  lng: "en" /* window.location.pathname.substring(1, 2) === 'es' ? 'es': 'en', */, // Idioma predeterminado
-  fallbackLng: "es", // Idioma de respaldo
-  interpolation: {
-    escapeValue: false,
-  },
-});
+  });
 
 export default i18n;

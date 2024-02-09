@@ -63,9 +63,9 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
       <nav>
         <div className="navbar--logo" onClick={pageUp}>
           {darkMode ? (
-            <img src="/assets/logo1.png" alt="logoblack" />
+            <img src="/assets/logowhite.png" alt="logowhite" />
           ) : (
-            <img src="/assets/logo.png" alt="logowhite" />
+            <img src="/assets/logoblack.png" alt="logoblack" />
           )}
         </div>
         <div className="navbar--links">
