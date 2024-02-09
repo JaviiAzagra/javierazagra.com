@@ -175,3 +175,11 @@
     width: 250px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .about--left__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
