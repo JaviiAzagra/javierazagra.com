@@ -8,7 +8,7 @@
 
   &--cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 3fr);
     gap: 20px;
     max-width: 1500px;
 
@@ -19,7 +19,6 @@
 
     &__card {
       width: 340px;
-      height: 170px;
       display: flex;
       flex-direction: column;
       justify-content: start;
@@ -50,6 +49,18 @@
         font-size: 15px;
         font-weight: 400;
         line-height: 20px;
+      }
+
+      &--language {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        p {
+          background-color: #e7e8ec;
+          padding: 2px 8px;
+          border-radius: 12px;
+          font-size: 14px;
+        }
       }
     }
 

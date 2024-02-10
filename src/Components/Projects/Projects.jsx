@@ -8,12 +8,20 @@ const Projects = ({ darkMode }) => {
   return (
     <div className="projects" id="projects">
       <div className="projects--cards">
-        <a href="https://tk-keyboards.vercel.app/" target="_blank">
+        <a
+          href="https://tk-keyboards.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="projects--cards__card">
             <div className="projects--cards__card--img">
               <img src="/assets/iconos/logotkey.png" alt="TK Keyboards" />
             </div>
-            <a href="https://tk-keyboards.vercel.app/" target="_blank">
+            <a
+              href="https://tk-keyboards.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               TK Keyboards
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -34,9 +42,19 @@ const Projects = ({ darkMode }) => {
               </svg>
             </a>
             <p>{t("Description1")}</p>
+            <div className="projects--cards__card--language">
+              <p>React</p>
+              <p>Node.js</p>
+              <p>Express.js</p>
+              <p>MongoDB</p>
+            </div>
           </div>
         </a>
-        <a href="https://front-proyectofinal.vercel.app/" target="_blank">
+        <a
+          href="https://front-proyectofinal.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="projects--cards__card">
             <div className="projects--cards__card--img">
               {darkMode ? (
@@ -48,7 +66,11 @@ const Projects = ({ darkMode }) => {
                 <img src="/assets/iconos/logohe.png" alt="Medical Clinic" />
               )}
             </div>
-            <a href="https://front-proyectofinal.vercel.app/" target="_blank">
+            <a
+              href="https://front-proyectofinal.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Medical Clinic{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,9 +91,19 @@ const Projects = ({ darkMode }) => {
               </svg>
             </a>
             <p>{t("Description2")}</p>
+            <div className="projects--cards__card--language">
+              <p>React</p>
+              <p>Node.js</p>
+              <p>Express.js</p>
+              <p>MongoDB</p>
+            </div>
           </div>
         </a>
-        <a href="https://four-corners-rho.vercel.app/" target="_blank">
+        <a
+          href="https://four-corners-rho.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="projects--cards__card">
             <div className="projects--cards__card--img">
               <img src="/assets/iconos/logofc.png" alt="Four Corners" />
@@ -97,9 +129,19 @@ const Projects = ({ darkMode }) => {
               </svg>
             </a>
             <p>{t("Description3")}</p>
+            <div className="projects--cards__card--language">
+              <p>Angular</p>
+              <p>Node.js</p>
+              <p>Express.js</p>
+              <p>MongoDB</p>
+            </div>
           </div>
         </a>
-        <a href="https://www.mestrecabreta.com/" target="_blank">
+        <a
+          href="https://www.mestrecabreta.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="projects--cards__card">
             <div className="projects--cards__card--img">
               <img src="/assets/iconos/logomestre.png" alt="Mestre Cabreta" />
@@ -125,9 +167,19 @@ const Projects = ({ darkMode }) => {
               </svg>
             </a>
             <p>{t("Description4")}</p>
+            <div className="projects--cards__card--language">
+              <p>React</p>
+              <p>Node.js</p>
+              <p>Express.js</p>
+              <p>MongoDB</p>
+            </div>
           </div>
         </a>
-        <a href="https://luxury-cars-two.vercel.app/" target="_blank">
+        <a
+          href="https://luxury-cars-two.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="projects--cards__card">
             <div className="projects--cards__card--img">
               <img src="/assets/iconos/logolux.png" alt="Luxury Cars" />
@@ -153,6 +205,12 @@ const Projects = ({ darkMode }) => {
               </svg>
             </a>
             <p>{t("Description5")}</p>
+            <div className="projects--cards__card--language">
+              <p>Angular</p>
+              <p>Node.js</p>
+              <p>Express.js</p>
+              <p>MongoDB</p>
+            </div>
           </div>
         </a>
 
@@ -164,6 +222,7 @@ const Projects = ({ darkMode }) => {
             <a
               href="https://github.com/JaviiAzagra/BOT-DISCORD"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Discord Bot{" "}
               <svg
@@ -185,6 +244,9 @@ const Projects = ({ darkMode }) => {
               </svg>
             </a>
             <p>{t("Description6")}</p>
+            <div className="projects--cards__card--language">
+              <p>JavaScript</p>
+            </div>
           </div>
         </a>
       </div>
