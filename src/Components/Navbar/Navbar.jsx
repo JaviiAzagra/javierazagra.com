@@ -44,9 +44,13 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
   const menuItems = [
     { text: t("About"), href: "#about" },
     { text: t("Projects"), href: "#projects" },
-
     { text: t("Experience"), href: "#experience" },
     { text: t("Contact"), href: "#contact" },
+    {
+      text: t("Blog"),
+      href: "https://tkcoder-dev.vercel.app/",
+      target: "_blank",
+    },
   ];
 
   const toggleMenuMobile = () => {
@@ -71,7 +75,12 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
         <div className="navbar--links">
           <div className="navbar--links__link">
             {menuItems.map((item, index) => (
-              <a key={index} href={item.href} className="menu-item navbar-a">
+              <a
+                key={index}
+                href={item.href}
+                target={item.target}
+                className="menu-item navbar-a"
+              >
                 <span>{item.text}</span>
               </a>
             ))}
