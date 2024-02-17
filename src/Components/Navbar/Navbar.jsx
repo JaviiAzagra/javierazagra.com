@@ -46,11 +46,11 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
     { text: t("Projects"), href: "#projects" },
     { text: t("Experience"), href: "#experience" },
     { text: t("Contact"), href: "#contact" },
-    /* {
+    {
       text: t("Blog"),
       href: "https://tkcoder-dev.vercel.app/",
       target: "_blank",
-    }, */
+    },
   ];
 
   const toggleMenuMobile = () => {
