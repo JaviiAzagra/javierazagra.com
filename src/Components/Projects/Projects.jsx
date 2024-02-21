@@ -90,7 +90,7 @@ const Projects = ({ darkMode }) => {
             </a>
             <p>{t("Description8")}</p>
             <div className="projects--cards__card--language">
-              <p>Astro</p>
+              <p>React</p>
             </div>
           </div>
         </a>
