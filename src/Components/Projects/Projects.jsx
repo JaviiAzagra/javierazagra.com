@@ -52,7 +52,7 @@ const Projects = ({ darkMode }) => {
         </a>
 
         <a
-          href="https://tkcoder-dev.vercel.app/"
+          href="https://tkcoder.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
         >
