@@ -48,7 +48,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
     { text: t("Contact"), href: "#contact" },
     {
       text: t("Blog"),
-      href: "https://tkcoder-dev.vercel.app/",
+      href: "https://tkcoder.vercel.app/",
       target: "_blank",
     },
   ];
