@@ -46,6 +46,7 @@
       align-items: center;
       gap: 3px;
       cursor: pointer;
+      font-weight: 600;
     }
 
     &__theme {
@@ -64,7 +65,6 @@
 
       a {
         display: flex;
-        font-weight: 500;
         cursor: pointer;
         text-decoration: none;
       }
@@ -76,9 +76,10 @@
 
     a {
       display: flex;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
       text-decoration: none;
+      font-size: 14px;
     }
 
     a:hover {

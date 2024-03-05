@@ -34,20 +34,22 @@
     }
 
     form button {
-      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
       cursor: pointer;
-      width: 117px;
-      height: 48px;
-      margin: 0px auto 0;
       border-radius: 40px;
-      background-color: #2196f3;
-      border: none;
-      font-weight: 800;
-      color: white;
+      background-color: transparent;
+      border: 2px solid #2196f3;
+      font-weight: 600;
+      padding: 10px 50px;
+      color: black;
+      text-align: center;
     }
 
     form button:hover {
-      background-color: #54aef8;
+      background-color: #2196f3;
       color: white;
     }
   }
