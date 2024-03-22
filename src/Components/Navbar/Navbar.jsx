@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./Navbar.scss";
-import About from "../About/About";
-import i18n from "../i18n/i18n";
 import { useTranslation } from "react-i18next";
+import i18n from "../i18n/i18n";
+import "./Navbar.scss";
 
 const Navbar = ({ toggleDarkMode, darkMode }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -51,6 +50,12 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
       href: "https://tkcoder.vercel.app/",
       target: "_blank",
     },
+  ];
+
+  const lng = [
+    { text: "English", value: "en" },
+    { text: "Español", value: "es" },
+    { text: "Deutsch", value: "de" },
   ];
 
   const toggleMenuMobile = () => {
@@ -122,78 +127,31 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
               <path d="M6 9l6 6l6 -6" />
             </svg>
             <div className="dropdown-content">
-              <a
-                aria-label="lng"
-                onClick={() => {
-                  changeLanguage("es");
-                }}
-              >
-                Español
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-arrow-up-right"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+              {lng.map((item) => (
+                <button
+                  onClick={() => {
+                    changeLanguage(item.value);
+                  }}
                 >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M17 7l-10 10" />
-                  <path d="M8 7l9 0l0 9" />
-                </svg>
-              </a>
-              <a
-                aria-label="lng"
-                onClick={() => {
-                  changeLanguage("en");
-                }}
-              >
-                English
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-arrow-up-right"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M17 7l-10 10" />
-                  <path d="M8 7l9 0l0 9" />
-                </svg>
-              </a>
-              <a
-                aria-label="lng"
-                onClick={() => {
-                  changeLanguage("de");
-                }}
-              >
-                Deutsch
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-arrow-up-right"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M17 7l-10 10" />
-                  <path d="M8 7l9 0l0 9" />
-                </svg>
-              </a>
+                  {item.text}{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-arrow-up-right"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M17 7l-10 10" />
+                    <path d="M8 7l9 0l0 9" />
+                  </svg>
+                </button>
+              ))}
             </div>
           </div>
 
@@ -244,7 +202,11 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
           </div>
 
           <div className="navbar--links__social">
-            <a href="https://github.com/JaviiAzagra" target="_blank">
+            <a
+              href="https://github.com/JaviiAzagra"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-brand-github"
@@ -264,6 +226,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
             <a
               href="https://www.linkedin.com/in/javier-azagra-garc%C3%ADa/"
               target="_blank"
+              rel="noreferrer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -285,7 +248,11 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                 <path d="M16 16v-3a2 2 0 0 0 -4 0" />
               </svg>
             </a>
-            <a href="https://twitter.com/12jav1_" target="_blank">
+            <a
+              href="https://twitter.com/12jav1_"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-brand-x"
@@ -353,6 +320,8 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                       onClick={toggleMenuMobile}
                       key={index}
                       href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="menu-item navbar-a"
                     >
                       <span>{item.text}</span>
@@ -537,7 +506,11 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                   </label>
                 </div>
                 <div className="mobilemenu--content__links--social">
-                  <a href="https://github.com/JaviiAzagra" target="_blank">
+                  <a
+                    href="https://github.com/JaviiAzagra"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="icon icon-tabler icon-tabler-brand-github"
@@ -557,6 +530,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                   <a
                     href="https://www.linkedin.com/in/javier-azagra-garc%C3%ADa/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -578,7 +552,11 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                       <path d="M16 16v-3a2 2 0 0 0 -4 0" />
                     </svg>
                   </a>
-                  <a href="https://twitter.com/12jav1_" target="_blank">
+                  <a
+                    href="https://twitter.com/12jav1_"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="icon icon-tabler icon-tabler-brand-twitter"

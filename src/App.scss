@@ -85,7 +85,11 @@ body {
   .dropdown-content {
     background-color: #202127;
 
-    a:hover {
+    button {
+      color: white;
+    }
+
+    button:hover {
       background-color: #2b2f36;
     }
   }
