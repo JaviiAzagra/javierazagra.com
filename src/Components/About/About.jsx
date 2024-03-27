@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import "./About.scss";
-import pdf from "./Javier-AzagraCV.pdf";
-import Habilities from "../Habilities/Habilities";
 import { useTranslation } from "react-i18next";
+import Habilities from "../Habilities/Habilities";
+import "./About.scss";
+import pdf from "./JavierAzagraCV.pdf";
 
 const About = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isBackgroundBlocked, setIsBackgroundBlocked] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -32,7 +32,7 @@ const About = () => {
             <span>{t("AboutInfo")}</span>
           </p>
           <div className="about--left__social">
-            <a target="_blank" href={pdf}>
+            <a target="_blank" rel="noreferrer" href={pdf}>
               {t("CV")}
             </a>
             <button onClick={togglePopup}>{t("Skills")}</button>

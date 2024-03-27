@@ -380,81 +380,31 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                         marginLeft: "30px",
                       }}
                     >
-                      <a
-                        aria-label="lng"
-                        onClick={() => {
-                          changeLanguage("es");
-                          toggleMenuMobile();
-                        }}
-                      >
-                        Español{" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="icon icon-tabler icon-tabler-arrow-up-right"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                      {lng.map((item) => (
+                        <button
+                          onClick={() => {
+                            changeLanguage(item.value);
+                          }}
                         >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M17 7l-10 10" />
-                          <path d="M8 7l9 0l0 9" />
-                        </svg>
-                      </a>
-                      <a
-                        aria-label="lng"
-                        onClick={() => {
-                          changeLanguage("en");
-                          toggleMenuMobile();
-                        }}
-                      >
-                        English{" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="icon icon-tabler icon-tabler-arrow-up-right"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M17 7l-10 10" />
-                          <path d="M8 7l9 0l0 9" />
-                        </svg>
-                      </a>
-                      <a
-                        aria-label="lng"
-                        onClick={() => {
-                          changeLanguage("de");
-                          toggleMenuMobile();
-                        }}
-                      >
-                        Deutsch{" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="icon icon-tabler icon-tabler-arrow-up-right"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M17 7l-10 10" />
-                          <path d="M8 7l9 0l0 9" />
-                        </svg>
-                      </a>
+                          {item.text}{" "}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-arrow-up-right"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M17 7l-10 10" />
+                            <path d="M8 7l9 0l0 9" />
+                          </svg>
+                        </button>
+                      ))}
                     </div>
                   )}
                 </div>
