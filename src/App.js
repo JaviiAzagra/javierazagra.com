@@ -40,6 +40,7 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
+      {/* <div className="App--color"></div> */}
       <Analytics />
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <About />

@@ -6,6 +6,23 @@
   padding-top: 100px;
   border-bottom: 1px solid #cccccc;
 
+  button {
+    margin-top: 20px;
+    display: flex;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #2196f3;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+  }
+  button:hover {
+    background-color: #54aef8;
+  }
+
   &--cards {
     display: grid;
     grid-template-columns: repeat(3, 3fr);
@@ -43,6 +60,10 @@
         display: flex;
         align-items: center;
         gap: 8px;
+      }
+      a:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.4rem;
       }
       p {
         color: #777777;

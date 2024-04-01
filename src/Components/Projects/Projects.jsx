@@ -1,349 +1,140 @@
-import React from "react";
-import "./Projects.scss";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import "./Projects.scss";
 
-const Projects = ({ darkMode }) => {
+const projects = [
+  {
+    img: "/assets/iconos/logotkey.png",
+    imgblack: "/assets/iconos/logotkey.png",
+    title: "TK Keyboards",
+    description: "Description1",
+    link: "https://tk-keyboards.vercel.app/",
+    tag: ["React", "Node.js", "Express.js", "MongoDB"],
+  },
+  {
+    img: "/assets/iconos/logotkcoderwhite.png",
+    imgblack: "/assets/iconos/logotkcoderblack.png",
+    title: "TkCoder",
+    description: "Description2",
+    link: "https://tkcoder.vercel.app/",
+    tag: ["React"],
+  },
+  {
+    img: "/assets/iconos/logomestre.png",
+    imgblack: "/assets/iconos/logomestre.png",
+    title: "Mestre Cabreta",
+    description: "Description6",
+    link: "https://four-corners-rho.vercel.app/",
+    tag: ["React", "Node.js", "Express.js", "MongoDB"],
+  },
+  {
+    img: "/assets/iconos/logotd.png",
+    imgblack: "/assets/iconos/logotdblack.png",
+    title: "To-Do List",
+    description: "Description3",
+    link: "https://todo-list-eta-two-75.vercel.app/",
+    tag: ["React"],
+  },
+  {
+    img: "/assets/iconos/logohewhite.png",
+    imgblack: "/assets/iconos/logohe.png",
+    title: "Medical Clinic",
+    description: "Description4",
+    link: "https://front-proyectofinal.vercel.app/",
+    tag: ["React", "Node.js", "Express.js", "MongoDB"],
+  },
+  {
+    img: "/assets/iconos/logofc.png",
+    imgblack: "/assets/iconos/logofc.png",
+    title: "Four Corners",
+    description: "Description5",
+    link: "https://four-corners-rho.vercel.app/",
+    tag: ["Angular", "Node.js", "Express.js", "MongoDB"],
+  },
+  {
+    img: "/assets/iconos/logolux.png",
+    imgblack: "/assets/iconos/logolux.png",
+    title: "Luxury Cars",
+    description: "Description7",
+    link: "https://luxury-cars-two.vercel.app/",
+    tag: ["Angular", "Node.js", "Express.js", "MongoDB"],
+  },
+  {
+    img: "/assets/iconos/logobot.png",
+    imgblack: "/assets/iconos/logobot.png",
+    title: "Discord Bot",
+    description: "Description1",
+    link: "https://github.com/JaviiAzagra/BOT-DISCORD",
+    tag: ["JavaScript", "Discord.js"],
+  },
+];
+
+const ProjectList = ({ darkMode }) => {
   const { t } = useTranslation();
+  const [showAllProjects, setShowAllProjects] = useState(false);
+
+  const handleClickShowMore = () => {
+    setShowAllProjects(true);
+  };
+
+  const handleClickShowLess = () => {
+    setShowAllProjects(false);
+  };
 
   return (
     <div className="projects" id="projects">
       <div className="projects--cards">
-        <a
-          href="https://tk-keyboards.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="projects--cards__card">
-            <div className="projects--cards__card--img">
-              <img src="/assets/iconos/logotkey.png" alt="TK Keyboards" />
+        {projects
+          .slice(0, showAllProjects ? projects.length : 6)
+          .map((project) => (
+            <div className="projects--cards__card" key={project.title}>
+              <div className="projects--cards__card--img">
+                {darkMode ? (
+                  <img src={project.img} alt={project.title} />
+                ) : (
+                  <img src={project.imgblack} alt={project.title} />
+                )}
+              </div>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                {project.title}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="icon icon-tabler icon-tabler-link"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="currentColor"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M9 15l6 -6" />
+                  <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                  <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                </svg>
+              </a>
+              <p>{t(project.description)}</p>
+              <div className="projects--cards__card--language">
+                {project.tag.map((tag, index) => (
+                  <p key={index}>{tag}</p>
+                ))}
+              </div>
             </div>
-            <a
-              href="https://tk-keyboards.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              TK Keyboards
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-link"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 15l6 -6" />
-                <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-              </svg>
-            </a>
-            <p>{t("Description1")}</p>
-            <div className="projects--cards__card--language">
-              <p>React</p>
-              <p>Node.js</p>
-              <p>Express.js</p>
-              <p>MongoDB</p>
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="https://tkcoder.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="projects--cards__card">
-            <div className="projects--cards__card--img">
-              {darkMode ? (
-                <img src="/assets/iconos/logotkcoderwhite.png" alt="TkCoder" />
-              ) : (
-                <img src="/assets/iconos/logotkcoderblack.png" alt="TkCoder" />
-              )}
-            </div>
-            <a
-              href="https://tkcoder.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              TkCoder
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-link"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 15l6 -6" />
-                <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-              </svg>
-            </a>
-            <p>{t("Description8")}</p>
-            <div className="projects--cards__card--language">
-              <p>React</p>
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="https://todo-list-eta-two-75.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="projects--cards__card">
-            <div className="projects--cards__card--img">
-              {darkMode ? (
-                <img src="/assets/iconos/logotd.png" alt="Medical Clinic" />
-              ) : (
-                <img
-                  src="/assets/iconos/logotdblack.png"
-                  alt="Medical Clinic"
-                />
-              )}
-            </div>
-            <a
-              href="https://todo-list-eta-two-75.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              To-Do List
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-link"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 15l6 -6" />
-                <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-              </svg>
-            </a>
-            <p>{t("Description7")}</p>
-            <div className="projects--cards__card--language">
-              <p>React</p>
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="https://front-proyectofinal.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="projects--cards__card">
-            <div className="projects--cards__card--img">
-              {darkMode ? (
-                <img
-                  src="/assets/iconos/logohewhite.png"
-                  alt="Medical Clinic"
-                />
-              ) : (
-                <img src="/assets/iconos/logohe.png" alt="Medical Clinic" />
-              )}
-            </div>
-            <a
-              href="https://front-proyectofinal.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Medical Clinic{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-link"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 15l6 -6" />
-                <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-              </svg>
-            </a>
-            <p>{t("Description2")}</p>
-            <div className="projects--cards__card--language">
-              <p>React</p>
-              <p>Node.js</p>
-              <p>Express.js</p>
-              <p>MongoDB</p>
-            </div>
-          </div>
-        </a>
-        <a
-          href="https://four-corners-rho.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="projects--cards__card">
-            <div className="projects--cards__card--img">
-              <img src="/assets/iconos/logofc.png" alt="Four Corners" />
-            </div>
-            <a href="https://four-corners-rho.vercel.app/" target="_blank">
-              Four Corners{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-link"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 15l6 -6" />
-                <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-              </svg>
-            </a>
-            <p>{t("Description3")}</p>
-            <div className="projects--cards__card--language">
-              <p>Angular</p>
-              <p>Node.js</p>
-              <p>Express.js</p>
-              <p>MongoDB</p>
-            </div>
-          </div>
-        </a>
-        <a
-          href="https://www.mestrecabreta.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="projects--cards__card">
-            <div className="projects--cards__card--img">
-              <img src="/assets/iconos/logomestre.png" alt="Mestre Cabreta" />
-            </div>
-            <a href="https://www.mestrecabreta.com/" target="_blank">
-              Mestre Cabreta{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-link"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 15l6 -6" />
-                <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-              </svg>
-            </a>
-            <p>{t("Description4")}</p>
-            <div className="projects--cards__card--language">
-              <p>React</p>
-              <p>Node.js</p>
-              <p>Express.js</p>
-              <p>MongoDB</p>
-            </div>
-          </div>
-        </a>
-        <a
-          href="https://luxury-cars-two.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="projects--cards__card">
-            <div className="projects--cards__card--img">
-              <img src="/assets/iconos/logolux.png" alt="Luxury Cars" />
-            </div>
-            <a href="https://luxury-cars-two.vercel.app/" target="_blank">
-              Luxury Cars{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-link"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 15l6 -6" />
-                <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-              </svg>
-            </a>
-            <p>{t("Description5")}</p>
-            <div className="projects--cards__card--language">
-              <p>Angular</p>
-              <p>Node.js</p>
-              <p>Express.js</p>
-              <p>MongoDB</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="https://github.com/JaviiAzagra/BOT-DISCORD" target="_blank">
-          <div className="projects--cards__card">
-            <div className="projects--cards__card--img">
-              <img src="/assets/iconos/logobot.png" alt="Discord Bot" />
-            </div>
-            <a
-              href="https://github.com/JaviiAzagra/BOT-DISCORD"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Discord Bot{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-link"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 15l6 -6" />
-                <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
-                <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
-              </svg>
-            </a>
-            <p>{t("Description6")}</p>
-            <div className="projects--cards__card--language">
-              <p>JavaScript</p>
-            </div>
-          </div>
-        </a>
+          ))}
       </div>
+      {!showAllProjects ? (
+        <button className="show-more-button" onClick={handleClickShowMore}>
+          {t("ShowMore")}
+        </button>
+      ) : (
+        <button className="show-more-button" onClick={handleClickShowLess}>
+          {t("ShowLess")}
+        </button>
+      )}
     </div>
   );
 };
 
-export default Projects;
+export default ProjectList;

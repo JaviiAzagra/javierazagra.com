@@ -8,6 +8,11 @@ const About = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isBackgroundBlocked, setIsBackgroundBlocked] = useState(false);
   const { t } = useTranslation();
+  const [showFirstImage, setShowFirstImage] = useState(true);
+
+  const handleClick = () => {
+    setShowFirstImage(!showFirstImage);
+  };
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -65,7 +70,24 @@ const About = () => {
           </div>
         </div>
         <div className="about--right">
-          <img className="colorful-shadow" src="/assets/logo.jpg" alt="logo" />
+          {showFirstImage ? (
+            <img
+              src="/assets/logomemoji.png"
+              alt="logo"
+              onClick={handleClick}
+            />
+          ) : (
+            <img
+              style={{
+                borderRadius: "50%",
+                width: "300px",
+                filter: "none",
+              }}
+              src="/assets/logo.jpg"
+              alt="logo"
+              onClick={handleClick}
+            />
+          )}
         </div>
       </div>
     </div>
