@@ -4,7 +4,7 @@ import Habilities from "../Habilities/Habilities";
 import "./About.scss";
 import pdf from "./JavierAzagraCV.pdf";
 
-const About = () => {
+const About = ({ darkMode }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isBackgroundBlocked, setIsBackgroundBlocked] = useState(false);
   const { t } = useTranslation();
@@ -30,6 +30,15 @@ const About = () => {
   return (
     <div id="about">
       <div className="about">
+        <div className="about--touch">
+          <p>Click</p>
+          {darkMode ? (
+            <img src="/assets/arrowaboutwhite.png" alt="Arrow" />
+          ) : (
+            <img src="/assets/arrowabout.png" alt="Arrow" />
+          )}
+        </div>
+
         <div className="about--left">
           <h1>Javier Azagra</h1>
           <h2>IT & Full Stack Developer</h2>

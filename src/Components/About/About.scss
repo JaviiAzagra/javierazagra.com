@@ -1,9 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
+
 .about {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 150px;
   gap: 5%;
+
+  &--touch {
+    position: absolute;
+
+    img {
+      position: absolute;
+      right: -600px;
+      top: -130px;
+      rotate: 130deg;
+      width: 100px;
+    }
+
+    p {
+      position: absolute;
+      right: -600px;
+      top: -190px;
+      font-size: 30px;
+      font-family: "Delicious Handrawn", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
 
   &--left {
     display: flex;
@@ -125,6 +149,12 @@
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1230px) {
+  .about--touch {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 980px) {

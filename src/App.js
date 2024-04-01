@@ -43,7 +43,7 @@ function App() {
       {/* <div className="App--color"></div> */}
       <Analytics />
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <About />
+      <About darkMode={darkMode} />
       <Projects darkMode={darkMode} />
       <Experience experience={CV.experience} />
       <Contact />
