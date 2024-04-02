@@ -24,7 +24,7 @@ const projects = [
     imgblack: "/assets/iconos/logomestre.png",
     title: "Mestre Cabreta",
     description: "Description4",
-    link: "https://four-corners-rho.vercel.app/",
+    link: "https://mestrecabreta.com/",
     tag: ["React", "Node.js", "Express.js", "MongoDB"],
   },
   {
