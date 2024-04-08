@@ -1,9 +1,9 @@
 // i18n.js
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import de from "./de.json";
 import en from "./en.json";
 import es from "./es.json";
-import de from "./de.json";
 
 const LANGUAGE_KEY = "appLanguage";
 

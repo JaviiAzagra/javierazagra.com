@@ -1,13 +1,13 @@
+import { Analytics } from "@vercel/analytics/react";
 import { useEffect, useState } from "react";
 import "./App.scss";
-import Navbar from "./Components/Navbar/Navbar";
-import About from "./Components/About/About";
-import Projects from "./Components/Projects/Projects";
 import CV from "./CV/CV";
+import About from "./Components/About/About";
+import Contact from "./Components/Contact/Contact";
 import Experience from "./Components/Experience/Experience";
 import Footer from "./Components/Footer/Footer";
-import Contact from "./Components/Contact/Contact";
-import { Analytics } from "@vercel/analytics/react";
+import Navbar from "./Components/Navbar/Navbar";
+import Projects from "./Components/Projects/Projects";
 
 function App() {
   const storedDarkMode = localStorage.getItem("darkMode");

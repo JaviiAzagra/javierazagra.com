@@ -1,6 +1,6 @@
 import React from "react";
-import "./Experience.scss";
 import { useTranslation } from "react-i18next";
+import "./Experience.scss";
 
 const Experience = () => {
   const { t } = useTranslation();
@@ -16,7 +16,7 @@ const Experience = () => {
           </div>
           <div className="experience__cards--card__right">
             <h1>Full Stack Developer</h1>
-            <a href="https://javierazagra.com" target="_blank">
+            <a href="https://javierazagra.com" target="_blank" rel="noreferrer">
               javierazagra.com
             </a>
             <p>{t("Experience1")}</p>
@@ -30,7 +30,11 @@ const Experience = () => {
           </div>
           <div className="experience__cards--card__right">
             <h1>IT Technician</h1>
-            <a href="https://www.primaverasound.com/es/" target="_blank">
+            <a
+              href="https://www.primaverasound.com/es/"
+              target="_blank"
+              rel="noreferrer"
+            >
               primaverasound.com
             </a>
             <p>{t("Experience2")}</p>
@@ -44,7 +48,7 @@ const Experience = () => {
           </div>
           <div className="experience__cards--card__right">
             <h1>IT Technician</h1>
-            <a href="https://www.alten.es/" target="_blank">
+            <a href="https://www.alten.es/" target="_blank" rel="noreferrer">
               alten.es
             </a>
             <p>{t("Experience3")}</p>

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Habilities from "../Habilities/Habilities";
 import "./About.scss";
-import pdf from "./JavierAzagraCV.pdf";
 import cisco from "./Cisco.pdf";
+import pdf from "./JavierAzagraCV.pdf";
 
 const About = ({ darkMode }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
