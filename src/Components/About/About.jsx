@@ -3,9 +3,11 @@ import { useTranslation } from "react-i18next";
 import Habilities from "../Habilities/Habilities";
 import "./About.scss";
 import pdf from "./JavierAzagraCV.pdf";
+import cisco from "./Cisco.pdf";
 
 const About = ({ darkMode }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isPopupOpen2, setIsPopupOpen2] = useState(false);
   const [isBackgroundBlocked, setIsBackgroundBlocked] = useState(false);
   const { t } = useTranslation();
   const [showFirstImage, setShowFirstImage] = useState(true);
@@ -16,6 +18,11 @@ const About = ({ darkMode }) => {
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
+    setIsBackgroundBlocked(!isBackgroundBlocked);
+  };
+
+  const togglePopup2 = () => {
+    setIsPopupOpen2(!isPopupOpen2);
     setIsBackgroundBlocked(!isBackgroundBlocked);
   };
 
@@ -76,6 +83,42 @@ const About = ({ darkMode }) => {
               </div>
             )}
             <a href="mailto:javiazagra12@gmail.com">{t("ContactMe")}</a>
+            <button onClick={togglePopup2} target="_blank" rel="noreferrer">
+              {t("Certifications")}
+            </button>
+            {isPopupOpen2 && (
+              <div className="popup-overlay">
+                <div className="popup-content">
+                  <a
+                    style={{ marginTop: "30px", marginBottom: "10px" }}
+                    target="_blank"
+                    rel="noreferrer"
+                    href={cisco}
+                  >
+                    Cisco
+                  </a>
+
+                  <button className="close-button" onClick={togglePopup2}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-x"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M18 6l-12 12" />
+                      <path d="M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <div className="about--right">
