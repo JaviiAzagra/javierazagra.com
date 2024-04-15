@@ -8,7 +8,6 @@ import pdf from "./JavierAzagraCV.pdf";
 const About = ({ darkMode }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isPopupOpen2, setIsPopupOpen2] = useState(false);
-  const [isBackgroundBlocked, setIsBackgroundBlocked] = useState(false);
   const { t } = useTranslation();
   const [showFirstImage, setShowFirstImage] = useState(true);
 
@@ -18,21 +17,11 @@ const About = ({ darkMode }) => {
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
-    setIsBackgroundBlocked(!isBackgroundBlocked);
   };
 
   const togglePopup2 = () => {
     setIsPopupOpen2(!isPopupOpen2);
-    setIsBackgroundBlocked(!isBackgroundBlocked);
   };
-
-  useEffect(() => {
-    if (isBackgroundBlocked) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [isBackgroundBlocked]);
 
   return (
     <div id="about">
