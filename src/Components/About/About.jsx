@@ -26,14 +26,14 @@ const About = ({ darkMode }) => {
   return (
     <div id="about">
       <div className="about">
-        <div className="about--touch">
+        {/* <div className="about--touch">
           <p>Click</p>
           {darkMode ? (
             <img src="/assets/arrowaboutwhite.png" alt="Arrow" />
           ) : (
             <img src="/assets/arrowabout.png" alt="Arrow" />
           )}
-        </div>
+        </div> */}
 
         <div className="about--left">
           <h1>Javier Azagra</h1>
@@ -111,7 +111,8 @@ const About = ({ darkMode }) => {
           </div>
         </div>
         <div className="about--right">
-          {showFirstImage ? (
+          <img src="/assets/logomemoji.png" alt="logo" onClick={handleClick} />
+          {/* {showFirstImage ? (
             <img
               src="/assets/logomemoji.png"
               alt="logo"
@@ -128,7 +129,7 @@ const About = ({ darkMode }) => {
               alt="logo"
               onClick={handleClick}
             />
-          )}
+          )} */}
         </div>
       </div>
     </div>
