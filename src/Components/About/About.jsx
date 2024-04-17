@@ -9,11 +9,6 @@ const About = ({ darkMode }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isPopupOpen2, setIsPopupOpen2] = useState(false);
   const { t } = useTranslation();
-  const [showFirstImage, setShowFirstImage] = useState(true);
-
-  const handleClick = () => {
-    setShowFirstImage(!showFirstImage);
-  };
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -109,25 +104,7 @@ const About = ({ darkMode }) => {
           </div>
         </div>
         <div className="about--right">
-          <img src="/assets/logomemoji.webp" alt="logo" onClick={handleClick} />
-          {/* {showFirstImage ? (
-            <img
-              src="/assets/logomemoji.png"
-              alt="logo"
-              onClick={handleClick}
-            />
-          ) : (
-            <img
-              style={{
-                borderRadius: "50%",
-                width: "300px",
-                filter: "none",
-              }}
-              src="/assets/logo.jpg"
-              alt="logo"
-              onClick={handleClick}
-            />
-          )} */}
+          <img fetchpriority="high" src="/assets/logomemoji.webp" alt="logo" />
         </div>
       </div>
     </div>
