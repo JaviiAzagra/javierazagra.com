@@ -84,12 +84,33 @@ body {
     z-index: 1;
   }
 
+  .about .about--left p {
+    font-size: 20px;
+    color: #a3a3a3;
+  }
+
   .projects--cards__card {
     background-color: #202127;
   }
 
+  .projects--cards__card p {
+    color: #a3a3a3;
+  }
+
   .experience__cards--card:hover {
     background-color: #202127;
+  }
+
+  .experience__cards--card__right p {
+    color: #a3a3a3;
+  }
+
+  .experience__cards--card__right a {
+    color: #a3a3a3;
+  }
+
+  .experience__cards--card__left p {
+    color: #a3a3a3;
   }
 
   .popup-content {
