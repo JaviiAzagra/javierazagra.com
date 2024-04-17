@@ -45,7 +45,7 @@ const About = ({ darkMode }) => {
             <a target="_blank" rel="noreferrer" href={pdf}>
               {t("CV")}
             </a>
-            <button onClick={togglePopup}>{t("Skills")}</button>
+            <a onClick={togglePopup}>{t("Skills")}</a>
             {isPopupOpen && (
               <div className="popup-overlay">
                 <div className="popup-content">
@@ -72,9 +72,9 @@ const About = ({ darkMode }) => {
               </div>
             )}
             <a href="mailto:javiazagra12@gmail.com">{t("ContactMe")}</a>
-            <button onClick={togglePopup2} target="_blank" rel="noreferrer">
+            <a onClick={togglePopup2} target="_blank" rel="noreferrer">
               {t("Certifications")}
-            </button>
+            </a>
             {isPopupOpen2 && (
               <div className="popup-overlay">
                 <div className="popup-content">
