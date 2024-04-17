@@ -7,7 +7,7 @@
   padding-top: 150px;
   gap: 5%;
 
-  &--touch {
+  &/* --touch {
     position: absolute;
 
     img {
@@ -27,7 +27,7 @@
       font-weight: 400;
       font-style: normal;
     }
-  }
+  } */
 
   &--left {
     display: flex;
@@ -107,6 +107,7 @@
 
     img {
       width: 300px;
+      height: auto;
     }
   }
 }

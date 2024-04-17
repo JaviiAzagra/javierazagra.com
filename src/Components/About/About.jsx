@@ -111,7 +111,7 @@ const About = ({ darkMode }) => {
           </div>
         </div>
         <div className="about--right">
-          <img src="/assets/logomemoji.png" alt="logo" onClick={handleClick} />
+          <img src="/assets/logomemoji.webp" alt="logo" onClick={handleClick} />
           {/* {showFirstImage ? (
             <img
               src="/assets/logomemoji.png"
