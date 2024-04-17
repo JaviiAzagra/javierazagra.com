@@ -10,7 +10,19 @@ import Navbar from "./Components/Navbar/Navbar";
 import Projects from "./Components/Projects/Projects";
 
 function App() {
-  const storedDarkMode = localStorage.getItem("darkMode");
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prev) => !prev);
+  };
+
+  /* const storedDarkMode = localStorage.getItem("darkMode");
   const [darkMode, setDarkMode] = useState(
     storedDarkMode ? JSON.parse(storedDarkMode) : null
   );
@@ -36,7 +48,7 @@ function App() {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
     localStorage.setItem("darkMode", JSON.stringify(newDarkMode));
-  };
+  }; */
 
   return (
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
