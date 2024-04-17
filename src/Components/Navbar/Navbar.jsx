@@ -161,6 +161,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                 type="checkbox"
                 checked={darkMode}
                 onChange={toggleDarkMode}
+                aria-label="Dark Mode"
               />
               <span className="slider">
                 {darkMode ? (
@@ -206,6 +207,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
               href="https://github.com/JaviiAzagra"
               target="_blank"
               rel="noreferrer"
+              aria-label="Social Media"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -227,6 +229,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
               href="https://www.linkedin.com/in/javier-azagra-garc%C3%ADa/"
               target="_blank"
               rel="noreferrer"
+              aria-label="Social Media"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -252,6 +255,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
               href="https://twitter.com/12jav1_"
               target="_blank"
               rel="noreferrer"
+              aria-label="Social Media"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -460,6 +464,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                     href="https://github.com/JaviiAzagra"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="GitHub"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -481,6 +486,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                     href="https://www.linkedin.com/in/javier-azagra-garc%C3%ADa/"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="linkedin"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -506,6 +512,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                     href="https://twitter.com/12jav1_"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="twitter"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
