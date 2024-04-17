@@ -1,6 +1,6 @@
 ### Hey, I'm Javier Azagra 👋🏽
 
-Welcome to my GitHub profile! I´m a 21 years old developer based in Spain. I love working on challenging projects that allow me to learn and grow as a professional. Here you'll find a showcase of my projects and contributions across various technologies and development areas.
+Welcome to my portfolio! I´m a 21 years old developer based in Spain. I love working on challenging projects that allow me to learn and grow as a professional. Here you'll find a showcase of my projects and contributions across various technologies and development areas.
 
 ## 🔎 About
 
