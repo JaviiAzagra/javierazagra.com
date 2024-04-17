@@ -9,18 +9,20 @@
   button {
     margin-top: 20px;
     display: flex;
-    font-weight: 600;
+    font-weight: 550;
     cursor: pointer;
     text-decoration: none;
-    background-color: #e6621f;
-    border: none;
+    /* background-color: #e6621f; */
+    background: none;
+    border: 1px solid #f58953;
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 14px;
-    color: white;
+    color: #333333;
   }
   button:hover {
     background-color: #f58953;
+    color: white;
   }
 
   &--cards {

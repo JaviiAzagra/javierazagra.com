@@ -89,12 +89,24 @@ body {
     color: #a3a3a3;
   }
 
+  .about .about--left__social a {
+    color: white;
+  }
+
+  .about .about--left__social button {
+    color: white;
+  }
+
   .projects--cards__card {
     background-color: #202127;
   }
 
   .projects--cards__card p {
     color: #a3a3a3;
+  }
+
+  .projects button {
+    color: white;
   }
 
   .experience__cards--card:hover {

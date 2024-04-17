@@ -45,14 +45,16 @@
         font-weight: 600;
         cursor: pointer;
         text-decoration: none;
-        background-color: #e6621f;
+        /* background-color: #e6621f; */
+        border: 1px solid #f58953;
         padding: 10px 20px;
         border-radius: 20px;
         font-size: 14px;
-        color: rgb(255, 255, 255);
+        color: #333333;
       }
       a:hover {
         background-color: #f58953;
+        color: white;
       }
 
       button {
@@ -61,15 +63,17 @@
         font-weight: 600;
         cursor: pointer;
         text-decoration: none;
-        background-color: #e6621f;
-        border: none;
+        background: none;
+        /* background-color: #e6621f; */
+        border: 1px solid #f58953;
         padding: 10px 20px;
         border-radius: 20px;
         font-size: 14px;
-        color: white;
+        color: rgb(0, 0, 0);
       }
       button:hover {
         background-color: #f58953;
+        color: white;
       }
     }
 
