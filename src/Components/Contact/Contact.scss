@@ -23,7 +23,7 @@
 
     form input,
     form textarea {
-      border: #e6621f 1px solid;
+      border: #f58953 1px solid;
       margin: 10px 0;
       padding: 20px;
       outline: none;
@@ -42,13 +42,13 @@
       cursor: pointer;
       border-radius: 40px;
       background-color: transparent;
-      border: 1px solid #e6621f;
+      border: 1px solid #f58953;
       font-weight: 600;
       padding: 10px 50px;
     }
 
     form button:hover {
-      background-color: #e6621f;
+      background-color: #f58953;
       color: white;
     }
   }
