@@ -5,7 +5,7 @@ import "./About.scss";
 import cisco from "./Cisco.pdf";
 import pdf from "./JavierAzagraCV.pdf";
 
-const About = ({ darkMode }) => {
+const About = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isPopupOpen2, setIsPopupOpen2] = useState(false);
   const { t } = useTranslation();
@@ -21,15 +21,6 @@ const About = ({ darkMode }) => {
   return (
     <div id="about">
       <div className="about">
-        {/* <div className="about--touch">
-          <p>Click</p>
-          {darkMode ? (
-            <img src="/assets/arrowaboutwhite.png" alt="Arrow" />
-          ) : (
-            <img src="/assets/arrowabout.png" alt="Arrow" />
-          )}
-        </div> */}
-
         <div className="about--left">
           <h1>Javier Azagra</h1>
           <h2>IT & Full Stack Developer</h2>

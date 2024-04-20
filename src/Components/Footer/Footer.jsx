@@ -29,7 +29,7 @@ const Footer = () => {
       <div className="footer--botton">
         <div className="footer--botton__top">
           <p>
-            © Copyright 2023. Made by{" "}
+            ©2024 All rights reserved. Made by{" "}
             <a
               href="https://www.javierazagra.com"
               rel="noreferrer"

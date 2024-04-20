@@ -22,6 +22,8 @@ function App() {
     setDarkMode((prev) => !prev);
   };
 
+  // Detect user's system preference for dark mode
+
   /* const storedDarkMode = localStorage.getItem("darkMode");
   const [darkMode, setDarkMode] = useState(
     storedDarkMode ? JSON.parse(storedDarkMode) : null
@@ -52,7 +54,6 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
-      {/* <div className="App--color"></div> */}
       <Analytics />
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <About darkMode={darkMode} />

@@ -78,17 +78,9 @@
 
     h1 {
       font-size: 80px;
-      background: #ffffff; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to right,
-        #ff0000,
-        #36c6f1
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to right,
-        #fc9700,
-        #9932cc
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: #ffffff;
+      background: -webkit-linear-gradient(to right, #ff0000, #36c6f1);
+      background: linear-gradient(to right, #fc9700, #9932cc);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
