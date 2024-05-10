@@ -1,6 +1,6 @@
 export const CV = {
   hero: {
-    name: "< Hi, I'm Javier Azagra />",
+    name: "Javier Azagra",
     about: "Full Stack Developer Jr",
     city: "Madrid / Spain",
     email: "javiazagra12@gmail.com",
