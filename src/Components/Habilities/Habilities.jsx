@@ -57,6 +57,10 @@ const Habilities = () => {
           <img src="/assets/logos/office.png" alt="office" />
           <p>Office</p>
         </div>
+        <div>
+          <img src="/assets/logos/figma.png" alt="figma" />
+          <p>Figma</p>
+        </div>
       </div>
     </div>
   );
