@@ -32,7 +32,9 @@ const About = () => {
             <a target="_blank" rel="noreferrer" href={pdf}>
               {t("CV")}
             </a>
-            <button onClick={togglePopup}>{t("Skills")}</button>
+            <button className="buttonabout" onClick={togglePopup}>
+              {t("Skills")}
+            </button>
             {isPopupOpen && (
               <div className="popup-overlay">
                 <div className="popup-content">
@@ -59,7 +61,9 @@ const About = () => {
               </div>
             )}
             <a href="mailto:javiazagra12@gmail.com">{t("ContactMe")}</a>
-            <button onClick={togglePopup2}>{t("Certifications")}</button>
+            <button className="buttonabout" onClick={togglePopup2}>
+              {t("Certifications")}
+            </button>
             {isPopupOpen2 && (
               <div className="popup-overlay">
                 <div className="popup-content">
