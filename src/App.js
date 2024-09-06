@@ -8,6 +8,9 @@ import Experience from "./Components/Experience/Experience";
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import Projects from "./Components/Projects/Projects";
+import ReactGA from "react-ga4"; // Importa react-ga4
+
+const GA_TRACKING_ID = "G-414209045";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -18,39 +21,34 @@ function App() {
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
+  // Inicializa Google Analytics
+  useEffect(() => {
+    ReactGA.initialize(GA_TRACKING_ID);
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
+
+  // Envía un evento de vista de página cuando cambie la ruta
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ReactGA.send({ hitType: "pageview", page: url });
+    };
+
+    // Si estás usando un enrutador como React Router, necesitarás escuchar los cambios de ruta
+    // Puedes usar la API del enrutador para hacer esto. Ejemplo con React Router v6:
+    // const location = useLocation();
+    // useEffect(() => {
+    //   handleRouteChange(location.pathname);
+    // }, [location.pathname]);
+
+    // Elimina el manejador de eventos si es necesario
+    return () => {
+      // cleanup code if needed
+    };
+  }, []);
+
   const toggleDarkMode = () => {
     setDarkMode((prev) => !prev);
   };
-
-  // Detect user's system preference for dark mode
-
-  /* const storedDarkMode = localStorage.getItem("darkMode");
-  const [darkMode, setDarkMode] = useState(
-    storedDarkMode ? JSON.parse(storedDarkMode) : null
-  );
-
-  useEffect(() => {
-    if (darkMode === null) {
-      const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
-      setDarkMode(prefersDarkMode.matches);
-
-      const handleChange = (event) => {
-        setDarkMode(event.matches);
-      };
-
-      prefersDarkMode.addEventListener("change", handleChange);
-
-      return () => {
-        prefersDarkMode.removeEventListener("change", handleChange);
-      };
-    }
-  }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    localStorage.setItem("darkMode", JSON.stringify(newDarkMode));
-  }; */
 
   return (
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
