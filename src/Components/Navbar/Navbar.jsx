@@ -324,7 +324,6 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                       onClick={toggleMenuMobile}
                       key={index}
                       href={item.href}
-                      target="_blank"
                       rel="noopener noreferrer"
                       className="menu-item navbar-a"
                     >
