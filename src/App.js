@@ -10,7 +10,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Projects from "./Components/Projects/Projects";
 import ReactGA from "react-ga4"; // Importa react-ga4
 
-const GA_TRACKING_ID = "G-414209045";
+const GA_TRACKING_ID = "G-EF4H9B7VNK";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
