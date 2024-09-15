@@ -100,7 +100,7 @@ const About = () => {
           </div>
         </div>
         <div className="about--right">
-          <img fetchpriority="high" src="/assets/logomemoji.webp" alt="logo" />
+          <img fetchpriority="high" src="/assets/logo.jpg" alt="logo" />
         </div>
       </div>
     </div>
