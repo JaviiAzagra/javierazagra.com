@@ -40,14 +40,21 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
     }
   }, [isBackgroundBlocked]);
 
-  const menuItems = [
-    { text: t("About"), href: "#about" },
-    { text: t("Projects"), href: "#projects" },
-    { text: t("Experience"), href: "#experience" },
-    { text: t("Contact"), href: "#contact" },
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const links = [
+    { text: t("About"), id: "about" },
+    { text: t("Projects"), id: "projects" },
+    { text: t("Experience"), id: "experience" },
+    { text: t("Contact"), id: "contact" },
     {
       text: t("Blog"),
-      href: "https://tkcoder.vercel.app/",
+      id: "https://tkcoder.vercel.app/",
       target: "_blank",
     },
   ];
@@ -79,16 +86,11 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
         </div>
         <div className="navbar--links">
           <div className="navbar--links__link">
-            {menuItems.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                target={item.target}
-                className="menu-item navbar-a"
-              >
-                <span>{item.text}</span>
-              </a>
-            ))}
+          {links.map((link) => (
+            <button key={link.id} onClick={() => scrollToSection(link.id)}>
+              {link.text}
+            </button>
+          ))}
           </div>
 
           <div className="navbar--links__lng dropdown">
@@ -319,17 +321,14 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
               </button>
               <div className="mobilemenu--content__links">
                 <div className="mobilemenu--content__links--link">
-                  {menuItems.map((item, index) => (
-                    <a
-                      onClick={toggleMenuMobile}
-                      key={index}
-                      href={item.href}
-                      rel="noopener noreferrer"
-                      className="menu-item navbar-a"
-                    >
-                      <span>{item.text}</span>
-                    </a>
-                  ))}
+                {links.map((link) => (
+            <button key={link.id}  onClick={() => {
+                scrollToSection(link.id);
+                toggleMenuMobile();
+              }}>
+              {link.text}
+            </button>
+          ))}
                 </div>
 
                 <div
