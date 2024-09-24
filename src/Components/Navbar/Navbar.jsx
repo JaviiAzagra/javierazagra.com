@@ -54,7 +54,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
     { text: t("Contact"), id: "contact" },
     {
       text: t("Blog"),
-      id: "https://tkcoder.vercel.app/",
+      href: "https://tkcoder.vercel.app/",
       target: "_blank",
     },
   ];
@@ -87,9 +87,9 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
         <div className="navbar--links">
           <div className="navbar--links__link">
           {links.map((link) => (
-            <button key={link.id} onClick={() => scrollToSection(link.id)}>
+            <a key={link.id} href={link.href} target={link.target} onClick={() => scrollToSection(link.id)}>
               {link.text}
-            </button>
+            </a>
           ))}
           </div>
 
@@ -322,12 +322,12 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
               <div className="mobilemenu--content__links">
                 <div className="mobilemenu--content__links--link">
                 {links.map((link) => (
-            <button key={link.id}  onClick={() => {
+            <a key={link.id} href={link.href} target={link.target} onClick={() => {
                 scrollToSection(link.id);
                 toggleMenuMobile();
               }}>
               {link.text}
-            </button>
+            </a>
           ))}
                 </div>
 
