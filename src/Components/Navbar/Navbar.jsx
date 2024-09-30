@@ -52,11 +52,6 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
     { text: t("Projects"), id: "projects" },
     { text: t("Experience"), id: "experience" },
     { text: t("Contact"), id: "contact" },
-    {
-      text: t("Blog"),
-      href: "https://tkcoder.vercel.app/",
-      target: "_blank",
-    },
   ];
 
   const lng = [
@@ -86,11 +81,23 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
         </div>
         <div className="navbar--links">
           <div className="navbar--links__link">
-          {links.map((link) => (
-            <a key={link.id} href={link.href} target={link.target} onClick={() => scrollToSection(link.id)}>
-              {link.text}
+            {links.map((link) => (
+              <button
+                key={link.id}
+                href={link.href}
+                target={link.target}
+                onClick={() => scrollToSection(link.id)}
+              >
+                {link.text}
+              </button>
+            ))}
+            <a
+              href="https://tkcoder.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Blog{" "}
             </a>
-          ))}
           </div>
 
           <div className="navbar--links__lng dropdown">
@@ -321,14 +328,26 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
               </button>
               <div className="mobilemenu--content__links">
                 <div className="mobilemenu--content__links--link">
-                {links.map((link) => (
-            <a key={link.id} href={link.href} target={link.target} onClick={() => {
-                scrollToSection(link.id);
-                toggleMenuMobile();
-              }}>
-              {link.text}
-            </a>
-          ))}
+                  {links.map((link) => (
+                    <button
+                      key={link.id}
+                      href={link.href}
+                      target={link.target}
+                      onClick={() => {
+                        scrollToSection(link.id);
+                        toggleMenuMobile();
+                      }}
+                    >
+                      {link.text}
+                    </button>
+                  ))}
+                  <a
+                    href="https://tkcoder.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Blog{" "}
+                  </a>
                 </div>
 
                 <div
