@@ -29,8 +29,6 @@ const Experience = () => {
   ];
   return (
     <div className="experience" id="experience">
-      <div className="experience--title"></div>
-
       <div className="experience__cards">
         {experience.map((experience) => (
           <div className="experience__cards--card">
