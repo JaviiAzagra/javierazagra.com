@@ -9,6 +9,7 @@ import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import Projects from "./Components/Projects/Projects";
 import ReactGA from "react-ga4"; // Importa react-ga4
+import i18n from "./Components/i18n/i18n";
 
 const GA_TRACKING_ID = "G-EF4H9B7VNK";
 
@@ -16,6 +17,12 @@ function App() {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("darkMode") === "true"
   );
+
+  const [selectedLng, setSelectedLng] = useState(i18n.language);
+
+  const handleLngChange = (newLng) => {
+    setSelectedLng(newLng);
+  };
 
   useEffect(() => {
     localStorage.setItem("darkMode", darkMode);
@@ -53,11 +60,15 @@ function App() {
   return (
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
       <Analytics />
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Navbar
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+        setSelectedLng={setSelectedLng}
+      />
       <About darkMode={darkMode} />
       <Projects darkMode={darkMode} />
       <Experience experience={CV.experience} />
-      <Contact />
+      <Contact selectedLng={selectedLng} onLngChange={handleLngChange} />
       <Footer />
     </div>
   );

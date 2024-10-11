@@ -28,5 +28,9 @@
 
   "Experience1": "Als freiberuflicher Full-Stack-Entwickler verfüge ich über Fachkenntnisse sowohl in der Frontend- als auch in der Backend-Entwicklung, was es mir ermöglicht, umfassende Weblösungen anzubieten. Vom Design der Benutzeroberflächen bis zur Optimierung der Serverleistung biete ich maßgeschneiderte, hochwertige Lösungen, die den Geschäftserfolg vorantreiben.",
   "Experience2": "Ich habe an der Fehlerbehebung von Computerproblemen und der Konfiguration sowohl von Druckern als auch von Computern gearbeitet. Darüber hinaus war ich an der Organisation von Druckern und ihren Netzwerkkonfigurationen beteiligt.",
-  "Experience3": "Meine Arbeit umfasste die Behebung von softwarebezogenen Computerproblemen sowohl für unser Unternehmen als auch für die Kunden, die wir betreuten. Ich hatte auch Kenntnisse in Microsoft Office."
+  "Experience3": "Meine Arbeit umfasste die Behebung von softwarebezogenen Computerproblemen sowohl für unser Unternehmen als auch für die Kunden, die wir betreuten. Ich hatte auch Kenntnisse in Microsoft Office.",
+
+  "formSuccess": "Nachricht erfolgreich gesendet",
+  "formError": "Fehler beim Senden der Nachricht",
+  "formServerError": "Serverfehler"
 }

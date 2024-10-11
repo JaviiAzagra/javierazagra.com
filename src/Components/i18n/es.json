@@ -28,5 +28,9 @@
 
   "Experience1": "Como desarrollador full stack freelance, tengo experiencia en el desarrollo tanto del front-end como del back-end, lo que me permite ofrecer soluciones web integrales. Desde el diseño de interfaces de usuario hasta la optimización del rendimiento del servidor, proporciono soluciones personalizadas y de alta calidad que impulsan el éxito empresarial.",
   "Experience2": "Trabajé en la resolución de problemas informáticos y en la configuración tanto de impresoras como de computadoras. Además, participé en la organización de impresoras y sus configuraciones de red.",
-  "Experience3": "Mi trabajo consistía en resolver problemas informáticos relacionados con el software tanto para nuestra empresa como para los clientes a los que servíamos. También tenía habilidades en Microsoft Office."
+  "Experience3": "Mi trabajo consistía en resolver problemas informáticos relacionados con el software tanto para nuestra empresa como para los clientes a los que servíamos. También tenía habilidades en Microsoft Office.",
+
+  "formSuccess": "Mensaje enviado correctamente",
+  "formError": "Error al enviar el mensaje",
+  "formServerError": "Error del servidor"
 }

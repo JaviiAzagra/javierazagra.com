@@ -11,6 +11,10 @@
     align-items: center;
     justify-content: center;
 
+    &__lng {
+      display: none;
+    }
+
     form {
       display: flex;
       flex-direction: column;
