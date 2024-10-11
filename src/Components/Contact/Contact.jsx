@@ -84,9 +84,9 @@ const Contact = ({ selectedLng, onLngChange }) => {
                             onChange={(e) => onLngChange(e.target.value)} // Change this line
                             required
                         >
-                            <option value="es">es</option>
-                            <option value="en">en</option>
-                            <option value="de">de</option>
+                            <option value="es">Español</option>
+                            <option value="en">English</option>
+                            <option value="de">Deutsch</option>
                         </select>
                     </div>
                     <textarea
