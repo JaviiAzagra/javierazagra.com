@@ -25,7 +25,7 @@ const Contact = ({ selectedLng, onLngChange }) => {
         };
 
         try {
-            const response = await fetch('https://7687-81-44-202-114.ngrok-free.app/api/contact', {
+            const response = await fetch('https://9cbc-81-44-202-114.ngrok-free.app/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
