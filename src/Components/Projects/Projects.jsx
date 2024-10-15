@@ -69,6 +69,16 @@ const projects = [
   },
 ];
 
+const tagLogos = {
+  React: "/assets/logos/react.png",
+  "Node.js": "/assets/logos/node.png",
+  "Express.js": "/assets/logos/express.png",
+  MongoDB: "/assets/logos/mongodb.png",
+  Angular: "/assets/logos/angular.png",
+  JavaScript: "/assets/logos/js.png",
+  "Discord.js": "/assets/logos/discord.png",
+};
+
 const ProjectList = ({ darkMode }) => {
   const { t } = useTranslation();
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -118,7 +128,13 @@ const ProjectList = ({ darkMode }) => {
               <p>{t(project.description)}</p>
               <div className="projects--cards__card--language">
                 {project.tag.map((tag, index) => (
-                  <p key={index}>{tag}</p>
+                  <div
+                    key={index}
+                    className="projects--cards__card--language__tag"
+                  >
+                    <img src={tagLogos[tag]} alt={tag} className="tag-logo" />
+                    <p key={index}>{tag}</p>
+                  </div>
                 ))}
               </div>
             </div>
